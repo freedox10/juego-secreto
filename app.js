@@ -1,61 +1,60 @@
+/*
 //Variables
+let numeroSecreto = 6;
+let numeroUsuario = 0;
+let intentos = 1;
+let palabraVeces = 'vez';
 
-let numeroSecreto = 2;
-let numeroUsuario = prompt("Me indicas un número entre 1 y 10 por favor:");
+while (numeroUsuario != numeroSecreto) {
+    numeroUsuario = prompt("Me indicas un número entre 1 y 10 por favor:");
 
-console.log('Valor de intento:', numeroUsuario);
-console.log('Resultado de la comparación:', numeroUsuario == numeroSecreto);
-console.log('Valor del número secreto:', numeroSecreto);
-
-//Este código realiza
-//la comparación
-
-if (numeroUsuario == numeroSecreto) {
-    //Acertamos, fue verdadera la condición
-    alert(`Acertaste, el número es: ${numeroUsuario}`);
-} else {
-    if (numeroUsuario > numeroSecreto) {
-        alert('El número secreto es menor');
+    console.log(numeroUsuario);
+    if (numeroUsuario == numeroSecreto) {
+        //Acertamos, fue verdadera la condición
+        alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${palabraVeces}`);
     } else {
-        alert('El número secreto es mayor');
+        if (numeroUsuario > numeroSecreto) {
+            alert('El número secreto es menor');
+        } else {
+            alert('El número secreto es mayor');
+        }
+        //Incrementamos el contador cuando no acierta
+        intentos = intentos + 1;
+        palabraVeces = 'veces';
+        //La condición no se cumplió
+        //alert('Lo siento, no acertaste el número');
     }
-    //La condición no se cumplió
-    //alert('Lo siento, no acertaste el número');
 }
+*/
+/*
+let contador = 1;
+while (contador <= 10) {
+console.log(contador);
+contador++;
+}
+console.log(`Ya contamos hasta ${contador - 1}`);
+*/
+/*
+let contador = 10;
+while (contador >= 0) {
+console.log(contador);
+contador--;
+}
+console.log(`Ya contamos hasta ${contador + 1}`);
+*/
+/*
+let numeroMaximo = prompt("Ingresa un número para la cuenta Regresiva:");
+while (numeroMaximo >= 0) {
+console.log(numeroMaximo);
+numeroMaximo--;
+}
+console.log(`Llegamos a ${numeroMaximo + 1}`);
+*/
 
-//DESAFIO 2
-/*
-let diaSemana = prompt('que día de la semana es? :');
-if (diaSemana == 'Sábado' || diaSemana == 'Domingo') {
-    alert('Buen fin de Semana');
-} else {
-    alert('Buena Semana');
+let numeroMaximo = prompt("Ingresa un número para la cuenta Progresiva:");;
+let contador = 0;
+while (contador <= numeroMaximo) {
+console.log(contador);
+contador++
 }
-*/
-/*
-let numero = prompt('Escribe un número positivo o negativo');
-if (numero > 0) {
-    alert('Número positivo');
-} else if (numero < 0) {
-    alert('Número negativo');
-} else {
-    alert('El número es cero');
-}
-*/
-/*
-let puntuacion = 95;
-if (puntuacion >= 100) {
-    console.log('¡Enhorabuena, has ganado!');
-} else {
-    console.log('Inténtalo de nuevo para ganar.');
-}
-*/
-/*
-// saldo
-let saldoCuenta = 578; 
-alert(`Tu saldo es de $ ${saldoCuenta}.`);
-*/
-/*
-let nombre = prompt('Ingresa tu nombre');
-alert(`¡ Bienvenido ${nombre} !`);
-*/
+console.log(`Ya contamos hasta ${contador - 1}`);
